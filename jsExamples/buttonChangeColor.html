@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Exploring HTML</title>
+<style>
+body {
+	color: black;
+}
+h1 {
+	font-family: Arial, sans-serif;
+	font-size: 32px;
+	color: black;
+}
+</style>
+</head>
+<body>
+<h1>My First Web Page</h1>
+<p>This is my first web page, it's a little basic, but it's helping me understand how HTML works and how to markup my content.</p>
+<button id="color">Change Color!</button>
+  
+<script>
+  console.clear();  
+
+ var currentColor = "red";
+  
+  //line below had error - getElementByID  needs a lowercase d
+ document.getElementById("color").onclick = function(){
+   
+   //you are not calling a function - but instead need to use syntax above to run function or within to call another function.  
+   
+     console.log("function called");
+		if (currentColor == "red"){
+          document.body.style.color = "green";
+          currentColor = "green";
+		} else {
+          document.body.style.color = "red";
+          currentColor = "red";
+		}
+      console.log(currentColor);
+		//return currentColor;  //this is not needed
+	}
+  
+  
+  
+</script>
+</body>
+</html>
