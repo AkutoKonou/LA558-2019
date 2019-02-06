@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+  <title>Legend using CSS and HTML</title>
 </head>
 	<style>
+		body {
+			margin: 15px;
+		}
+
 		.legendBox {
 			display: block;
 			border-style: solid;
@@ -15,6 +19,7 @@
 			background-color: yellow;  /*set a default color*/
 			float: left;
 		}
+
 		.legendLine {
 			display: block;
 			border-style: solid;
@@ -22,14 +27,17 @@
 			width: 52px;
 			height: 2px;
 			float: left;
-			margin-top:8px;
+			margin-top: 8px;
 		}
+
 		.legendTitle {
 			font-weight: bold;
 			line-height: 1.6;
 		}
 	</style>
 <body>
+	<h4>Legend using CSS and HTML<h4>
+	<br>
 
 	<span class="legendTitle">Legend</span><br>
 	<div class="legendBox" style="background-color:blue;" ></div>&nbsp Polygon item 1<p>
