@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by profSeeger (http://jsbin.com/navoru/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="JSBin Interface Example">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin Example of interface</title>
+<style id="jsbin-css">
+/* element styles */
+body {
+  margin: 15px;
+}
+h3 {
+   color: navy;
+  text-align: center;
+}
+
+
+/* class styles */
+.redText {
+  color: red;
+}
+.blackText {
+  color: black;
+}
+
+/* element styles */
+#colorBox {
+  width: 100px;
+  height: 100px;
+  background-color:tan;
+}
+
+
+/* hyper link styles eg Pseudo-classes */
+a:link {
+  color: hotpink;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: red;
+  background-color: yellow;
+}
+a:active {
+  color: blue;
+}
+</style>
+</head>
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+ 
+  
+<body>
+  <h3>JSBin Interface Example</h3>
+<span class = "redText">This is some text with a style applied to make it display in a red text color.
+<p>
+  <span class = "blackText">Below is a div box. When you click <a href="#" id=>here</a>, the color of that box will change to red, orange, blue, yellow or green.
+ <p> 
+    <div id="colorBox">-</div>
+  <script id="jsbin-javascript">
+//For this example, I am using the jQuery library and therefore am enclosing the code in a $( document ).ready() function to ensure that the page is loaded and ready for JavaScript interaction.
+
+  console.clear();
+
+
+$(document).ready(function(){
+  //define an array containing five colors
+  var colorList = ["red", "orange", "blue", "yellow", "green"];
+  
+  $("a").click(function(){
+    console.log ("A link was clicked");
+    
+    //get length of the array and then print to console that value
+    colorLength = colorList.length;
+     console.log ("Length of array: "+colorLength);
+    
+     //randomly select a number between 0 and the array length
+    var x = Math.floor((Math.random() * colorLength) + 1);
+    
+    //now that you have a number get that the item listed in that location from the color array - remember however that arrays start with 0, so you have to subtract 1 from the array length.
+    myColor = colorList[x-1];
+    console.log("The random color is: "+myColor);
+    
+    //place the value of that random number as the text in the Box - syntax below uses pure JAvascript instead of jQuery. The way to do this in jQuery is commented out below it - note how much shorter the code is!
+  document.getElementById("colorBox").innerHTML = x;
+    //$("#colorBox").html(x);
+    
+    //Finally, change the color of the box using jQuery syntax 
+    $("#colorBox").css('background-color', myColor);
+    
+    
+    
+    //optionally uncomment line below and this would hide the box
+    //$("#colorBox").hide();
+  });
+
+});
+</script>
+</body>
+</html>
