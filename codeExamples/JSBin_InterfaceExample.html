@@ -14,8 +14,8 @@ Released under the MIT license: http://jsbin.mit-license.org
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin Example of interface</title>
-<style id="jsbin-css">
-/* element styles */
+<style>
+/* element selectors */
 body {
   margin: 15px;
 }
@@ -24,8 +24,7 @@ h3 {
   text-align: center;
 }
 
-
-/* class styles */
+/* class selectors */
 .redText {
   color: red;
 }
@@ -33,13 +32,17 @@ h3 {
   color: black;
 }
 
-/* element styles */
+/* id selectors */
 #colorBox {
   width: 100px;
   height: 100px;
   background-color:tan;
+  color: black;
+  font-size: 36px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;   /* the same as your div height */
 }
-
 
 /* hyper link styles eg Pseudo-classes */
 a:link {
@@ -67,7 +70,8 @@ a:active {
   <span class = "blackText">Below is a div box. When you click <a href="#" id=>here</a>, the color of that box will change to red, orange, blue, yellow or green.
  <p> 
     <div id="colorBox">-</div>
-  <script id="jsbin-javascript">
+    
+  <script>
 //For this example, I am using the jQuery library and therefore am enclosing the code in a $( document ).ready() function to ensure that the page is loaded and ready for JavaScript interaction.
 
   console.clear();
@@ -97,8 +101,6 @@ $(document).ready(function(){
     
     //Finally, change the color of the box using jQuery syntax 
     $("#colorBox").css('background-color', myColor);
-    
-    
     
     //optionally uncomment line below and this would hide the box
     //$("#colorBox").hide();
