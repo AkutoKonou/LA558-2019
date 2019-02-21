@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>slkide Show</title>
 </head>
+
 <body>
-<img name= "slide" width= "900" height="600"> </div>
+    <img name="slide" width="900" height="600"> </div>
 
+    <script>
+        var i = 0;
+        var images = [];
+        var time = 2000;
 
+        images[0] = "https://www.destinationtnt.com/wp-content/uploads/Knowsley-Building-IMG_61-2-600x600.jpg";
+        images[1] = "https://upload.wikimedia.org/wikipedia/commons/7/7a/Inverary_Castle_Morris_edited.jpg";
+        images[2] = "https://www.destinationtnt.com/wp-content/uploads/fs_hayes-court-IMG_5941-600x600.jpg";
+        images[3] = "https://www.destinationtnt.com/wp-content/uploads/stollmeyers-castle_IMG_20170623_080618-600x600.jpg";
 
-<script>
-var i =0; 
-var images = [];
-var time = 2000;
-           
-           images [0] = "https://www.destinationtnt.com/wp-content/uploads/Knowsley-Building-IMG_61-2-600x600.jpg";
-           images [1] = "https://upload.wikimedia.org/wikipedia/commons/7/7a/Inverary_Castle_Morris_edited.jpg";
-           images [2] = "https://www.destinationtnt.com/wp-content/uploads/fs_hayes-court-IMG_5941-600x600.jpg";
-           images [3] = "https://www.destinationtnt.com/wp-content/uploads/stollmeyers-castle_IMG_20170623_080618-600x600.jpg";
-           
-           //function 
-           function changeImg(){
-               document.slide.src = images [i];
-               
-               if(i < images.length - 1){
-                 i++;
-               } else {
-                   i =0;
-               }
+        //function 
+        function changeImg() {
+            document.slide.src = images[i];
+
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
             setTimeout("changeImg()", time);
-           }
-           
-           window.onload = changeImg;
-</script>
+        }
+
+        window.onload = changeImg;
+
+    </script>
 
 
 </body>
+
 </html>
