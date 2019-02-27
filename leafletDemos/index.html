@@ -11,18 +11,26 @@
             padding: 0;
         }
 
+        body {
+            font-size: 14px;
+        }
+
         .demoList h4 {
             display: inline
         }
+
         .demoList tr {
-              border-collapse:separate; 
-  border-spacing: 0 1em;
+            border-collapse: separate;
+            border-spacing: 0 1em;
         }
 
+        tr {
+            padding-bottom: 10em;
+        }
     </style>
 
     <script>
-
+        //https://gomakethings.com/listening-for-click-events-with-vanilla-javascript/
     </script>
 
 </head>
@@ -30,32 +38,51 @@
 <body>
     <h2>Leaflet Demo Code</h2>
     <font size="2" face="Arial">
-        <table class="demoList" width="700">
+        <table class="demoList" width="800" cellspacing="10">
             <tr>
                 <th width="20"></th>
-                <th width="450">Title</th>
-                <th width="230">Repositories/Code</th>
+                <th width="500">Title</th>
+                <th width="280">Repositories/Code</th>
 
             </tr>
 
             <tr>
-                <td>1 </td>
-                <td><a href="https://profseeger.github.io/LA558-2019/leafletDemos/leaflet001_GettingStarted.html">
+                <td valign="top">1</td>
+                <td>
+                    <a href="https://profseeger.github.io/LA558-2019/leafletDemos/leaflet001_GettingStarted.html" target="_blank">
                         <h4>Getting Started</h4>
-                    </a><br>Basic code to display a Leaflet Map</td>
-                <td><a href="https://github.com/profSeeger/LA558-2019/blob/master/leafletDemos/leaflet001_GettingStarted.html">Repo</a> • JSBIN (2018)</td>
+                    </a>
+                    <br>Basic code to display a Leaflet Map
+                </td>
+                <td>
+                    <a href="https://github.com/profSeeger/LA558-2019/blob/master/leafletDemos/leaflet001_GettingStarted.html" target="_blank">Repo</a> • <a href="https://profSeeger.jsbin.com/petewuv/edit?html,css,js,output" target="_blank">JSBIN (2019)</a>
+                </td>
             </tr>
             <tr>
-                <td>2 </td>
-                <td><a href="https://profseeger.github.io/LA558-2019/leafletDemos/leaflet002_multipleMarkers_jQuery.html">
+                <td valign="top">2</td>
+                <td>
+                    <a href="https://profseeger.github.io/LA558-2019/leafletDemos/leaflet002_multipleMarkers.html" target="_blank">
                         <h4>Multiple Markers and Hyper Link Map Controls</h4>
-                    </a></td>
-                <td><a href="https://github.com/profSeeger/LA558-2019/blob/master/leafletDemos/leaflet002_multipleMarkers_jQuery.html">Repo</a> •
-                    <a href="https://github.com/profSeeger/LA558-2019/blob/master/leafletDemos/leaflet002_multipleMarkers_jQuery.html">jQuery Repo</a> • JSBIN (2018)</td>
+                    </a>
+                    <br>Control map from hyper linked functions
+                </td>
+                <td>
+                    <a href="https://github.com/profSeeger/LA558-2019/blob/master/leafletDemos/leaflet002_multipleMarkers.html" target="_blank">Repo</a> •
+                    <a href="https://github.com/profSeeger/LA558-2019/blob/master/leafletDemos/leaflet002_multipleMarkers_jQuery.html" target="_blank">Repo (jQuery)</a> • <a href="https://jsbin.com/petewuv/edit?html,css,js,output" target="_blank">JSBIN (2019)</a>
+                </td>
             </tr>
 
         </table>
-
+        
+   <hr>     
+        <ul>
+<li>12a Leaflet circle and circle marker <a href="https://jsbin.com/tivayin/edit?html,js,output">JSBin</a>&nbsp;&bull; Repo &bull; GH Page</li>
+<li>13a<span>&nbsp;</span>Leaflet custom marker icons <a href="https://jsbin.com/senudos/edit?html,css,js,output">JSBin</a>&nbsp;&bull; Repo &bull; GH Page</li>
+<li>13b<span>&nbsp;</span>Leaflet Popups <a href="https://jsbin.com/senabav/edit?html,css,js,output">JSBin</a> &nbsp;&bull; Repo &bull; GH Page</li>
+<li>13c<span>&nbsp;</span>Leaflet multiple circle markers with color categories <a href="https://jsbin.com/putaze/edit?html,js,output">JSBin</a> &nbsp;&bull; Repo &bull; GH Page</li>
+<li>13c<span>&nbsp;</span>Leaflet multiple color categorized pin markers using googlemapsmarkers.com&nbsp;<a href="https://jsbin.com/goqawa/edit?html,css,js,output">JSBin</a> &nbsp;&bull; Repo &bull; GH Page</li>
+<li>13c Leaflet &gt; 4.5 Magnitude Earthquakes this last week&nbsp;<a href="https://jsbin.com/fopuqaj/edit?html,css,js,output">JSBin</a> &nbsp;&bull; Repo &bull; GH Page<br /><em>- note that this example loads the data using AJAX, You will be learning more about this soon, but for now just take note of the icons rendered by magnitude. You might notice that I have alternative URLs commented out. You can comment out the one I am using to see other data feeds and more earthquakes.</em></li>
+</ul>
 
 
 </body>
