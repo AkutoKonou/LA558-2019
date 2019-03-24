@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>jQuery AJAX Loader</title>
 
-<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-	<script>
-	$(document).ready(function(){
-    $("#button1").click(function(){
-        //$("#div1").load("https://raw.githubusercontent.com/cjseeger/LA558/master/test");
-		
-		
-		$("#div1").load("https://cjseeger.github.io/LA558/test.txt?");
-    });
-});
-
-
-$("#button2").click(function(){
-	alert("load JSON");
-  $.getJSON("colorsJSON.json", function(result){
-        $.each(result, function(i, field){
-            $("#div2").append(field + " ");
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#button1").click(function() {
+                $("#theTitle").load("data/text.txt?");
+            });
+            $("#button2").click(function() {
+                //alert("load JSON");
+                $.getJSON("data/colorsJSON.json", function(result) {
+                    $.each(result, function(i, field) {
+                        $("#div2").html(field + " ");
+                        $("#div3").html(i + " ");
+                    });
+                });
+            });
+            $("#button3").click(function() {
+                $("#myImage").attr('src', 'images/tractor.jpg')
+            });
         });
-    });
-});	
-		
-		
-	</script>
-</head>	
-	
-<body>
-Hello Class!!<br>
-	
-	
-<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+    </script>
+</head>
 
-<button id='button1'>Get External Content</button>
-	
-	<button id='button2'>Get JSON</button>
-	<br>
-	<div id="div2">---</div>
-	
-	<br><br>
-	
-	<img src="https://cjseeger.github.io/LA558/images/trike.jpg" alt="trike" height="432" width="500">
-	
+<body>
+
+
+        <h2><span id = "theTitle">Use jQuery AJAX to change this text when a button is pressed</span></h2>
+
+
+    <button id='button1'>Load text as new title</button>
+
+    <button id='button2'>Get JSON</button>
+
+    <button id='button3'>Replace image</button>
+
+
+    <br>
+    <div id="div2">---</div>
+    <div id="div3">---</div>
+
+    <br><br>
+
+    <img src="images/trike.jpg" alt="trike" height="432" width="500" id="myImage">
+
 </body>
+
 </html>
