@@ -45,6 +45,36 @@ var cities = {
           40.538851525354644
         ]
       }
+    },
+        {
+      "type": "Feature",
+      "properties": {
+        "place": "Grinnell, Iowa",
+        "name": "Marios",
+        "pet": "Llama"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.724722, 
+          41.743611
+        ]
+      }
+    },
+     {
+      "type": "Feature",
+      "properties": {
+        "place": "Los Angeles, California",
+        "name": "Rakibul",
+        "pet": "None"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.25, 
+          34.05 
+        ]
+      }
     }
   ]
 }
