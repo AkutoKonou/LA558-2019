@@ -31,13 +31,27 @@ var cities = {
         ]
       }
     },
+        {
+      "type": "Feature",
+      "properties": {
+        "place": "Orlando, Florida",
+        "name": "Athena & Arya",
+        "pet": "Dogs"
+ },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.38, 28.54
+           ]
+      }
+    },   
     {
       "type": "Feature",
       "properties": {
         "place": "Mesa, Arizona",
         "name": "Cody",
         "pet": "Dog"
-      },
+ },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -60,7 +74,22 @@ var cities = {
           34.05 
         ]
       }
-  },
+    },
+     {
+      "type": "Feature",
+      "properties": {
+        "place": "San Francisco, California",
+        "name": "Sayma",
+        "pet": "None"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -122.416667, 
+          37.783333 
+        ]
+      }
+    },
     {
       "type": "Feature",
       "properties": {
