@@ -1,6 +1,21 @@
 var cities = {
   "type": "FeatureCollection",
   "features": [
+     {
+      "type": "Feature",
+      "properties": {
+        "place": "Mumbai, India",
+        "name": "Prithvisingh Bisen",
+        "pet": "None"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.825833,
+          18.975
+        ]
+      }
+    },
     {
       "type": "Feature",
       "properties": {
@@ -16,6 +31,51 @@ var cities = {
         ]
       }
     },
+   {
+      "type": "Feature",
+      "properties": {
+        "place": "Seattle, Washington",
+        "name": "Panhavuth",
+        "pet": "Dog"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.327012,
+          47.594553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place": "Seattle, Washington",
+        "name": "Anna Thompson",
+        "pet": "Dog"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3321, 
+          47.6062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place": "New York, New York",
+        "name": "Anna Busch",
+        "pet": "Dog"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0059,
+          40.7127
+        ]
+      }
+    },    
     {
       "type": "Feature",
       "properties": {
@@ -36,7 +96,7 @@ var cities = {
       "properties": {
         "place": "Orlando, Florida",
         "name": "Athena & Arya",
-        "pet": "Dogs"
+        "pet": "Dog"
  },
       "geometry": {
         "type": "Point",
