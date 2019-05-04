@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="description" content="demo">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>project</title>
+        
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+      
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    
+       
+    <script src="https://profseeger.github.io/LA558-2019/classes/leaflet-ajax-gh-pages/dist/leaflet.ajax.min.js"></script>
+
+      
+      <style>
+          #map { 
+          width: 700px;
+          height: 500px;
+          margin: 0 auto;
+        }
+     h1 {
+        font-family: 'Roboto';
+        font-size: 50px;
+        font-weight: 400;
+        color: black;
+        text-align: center;    
+    }
+.navbar {
+  width: 100%;
+  background-color: darkgrey;
+  overflow: auto;
+    font-family: "Raleway", sans-serif;
+}
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+  background-color: #000;
+}
+.active {
+  background-color: grey;
+}
+    
+/* I learned that this allows you to have your navigation bar work with the size of the screen it is being viewed on*/ 
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+
+
+.legend {
+    line-height: 18px;
+    color: #555;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+ </style>
+      
+      
+ <script>
+      $(document).ready(function() {
+          //load the defaut start page on doc ready
+         $('#loadedContent').load('home.html');
+
+    
+
+  $(".menuButton").click(function() {
+    //preventDefault(),
+    var a = this.name + ".html";
+    console.log(a); 
+    
+    $('#loadedContent').load(a);
+
+  });
+
+});
+      </script>     
+      
+      
+      
+      
+      
+  </head>
+
+  <body>
+      <!-- each href has a name=""  where the value is the name of the file to load-->
+    
+    
+<div class="navbar">
+  <a href="#" class="menuButton" name = "home"><i class="fa fa-fw fa-home"></i> Home</a> 
+  
+   <a  href="#" class="menuButton" name = "page2"><i class="fa fa-fw fa-flag"></i> title for Page 2</a>
+  <a href="#" class="menuButton" name = "page3"><i class="fa fa-fw fa-map"></i> Intro (aka Page 3)</a> 
+ 
+</div>
+    
+    <div id="loadedContent"> 
+        ---
+    </div>
+
+    </body>
+    
+    
+    
+</html>
