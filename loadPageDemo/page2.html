@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title of the document</title>
@@ -22,7 +22,12 @@
 <body>
 <h3> Page 2</h3>
 Content for page 2 has an OSM Map<br><br>
-                         
+     <div id = 'map'></div>
+</body>
+
+</html>
+
+    <script>
 var osm = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 });
@@ -33,13 +38,5 @@ var map = L.map('map', {
   zoom: 11,
   layers: [osm]
 });
-      
-                         
-      
-                                                         
-                                                         
-                                                         
-                         
-</body>
-
-</html>
+    </script>   
+                
