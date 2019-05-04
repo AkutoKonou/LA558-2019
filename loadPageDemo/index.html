@@ -69,52 +69,39 @@
     display: block;
   }
 }
-
- </style>
+</style>
       
       
  <script>
-      $(document).ready(function() {
-          //load the defaut start page on doc ready
-         $('#loadedContent').load('home.html');
+$(document).ready(function() {
+    //load the defaut start page on doc ready
+    $('#loadedContent').load('home.html');
 
+    $(".menuButton").click(function() {
+        //preventDefault(),
+        var a = this.name + ".html?";
+        console.log(a); 
     
-
-  $(".menuButton").click(function() {
-    //preventDefault(),
-    var a = this.name + ".html?";
-    console.log(a); 
-    
-    $('#loadedContent').load(a);
-
-  });
-
+        $('#loadedContent').load(a);
+    });
 });
-      </script>     
-      
-      
-      
-      
-      
-  </head>
+</script>     
+           
+</head>
 
-  <body>
+<body>
 
     
 <div class="navbar">
   <a href="#" class="menuButton" name = "home"><i class="fa fa-fw fa-home"></i> Home</a> 
-  
    <a  href="#" class="menuButton" name = "page2"><i class="fa fa-fw fa-flag"></i>Title for Page 2</a>
   <a href="#" class="menuButton" name = "page3"><i class="fa fa-fw fa-map"></i> Intro (aka Page 3)</a> 
- 
 </div>
     
-    <div id="loadedContent"> 
-        ---You never see this because on load the home.html file is loaded and replaces the contents of this div---
-    </div>
+    
+<div id="loadedContent"> 
+    ---You never see this because on load the home.html file is loaded and replaces the contents of this div---
+</div>
 
-    </body>
-    
-    
-    
+</body>
 </html>
