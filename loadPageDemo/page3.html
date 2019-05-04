@@ -16,8 +16,18 @@
 
 <body>
 <h3> Page 3</h3>
-    Comntent for page 3<br>
+    Content for page 3 shows ESRI World Imagery<br><br></html>
       
+var esriWorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
+
+var map = L.map('map', {
+  center: [41.590833, -93.620833],
+  zoom: 11,
+  layers: [esriWorldImagery]
+});
+     
                          
                          
                          
