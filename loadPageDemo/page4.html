@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Des Moines</title>
+
+    <style>
+        #map {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            align-content: left;
+        }
+
+    </style>
+
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+    <h3>Des Moines - Page 2</h3>
+    Content for page 2 will also not load by itself because there is no script to load the Leaflet Library.<br>
+    The map should have an OSM Map displayed!<br>
+    This page includes a style for the #map that sets the map width to be 100%. This overides the map style established in the index.html file.<br><br>
+    <div id='map'></div>
+</body>
+
+</html>
+
+<script>
+    var osm = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    });
+
+
+    var map = L.map('map', {
+        center: [41.590833, -93.620833],
+        zoom: 11,
+        layers: [osm]
+    });
+
+</script>
