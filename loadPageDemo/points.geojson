@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#9aa60d",
+        "type": "park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.71131896972656,
+          41.61030862727467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#9aa60d",
+        "type": "park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.61656188964844,
+          41.572306568724365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "type": "airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.68385314941406,
+          41.54661683829194
+        ]
+      }
+    }
+  ]
+}
