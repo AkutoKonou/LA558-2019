@@ -11,6 +11,21 @@
             height: 500px;
             margin: 0 auto;
             align-content: left;
+            
+            .legend {
+    line-height: 18px;
+    color: #555;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
         }
     </style>
 </head>
@@ -115,15 +130,13 @@ layer.bindTooltip(total);
 		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
 			layer.bringToFront();
 		}
-
 	}
 
 
-
-
-
-
 myURL = "https://kendyl66.github.io/LA458-558/Final-Project/1940.geojson";
+
+myPointLayer= "https://raw.githubusercontent.com/profSeeger/LA558-2019/master/loadPageDemo/points.geojson";
+    
 
 //Load GeoJSON
 var geojsonLayer = new L.GeoJSON.AJAX(myURL, {
@@ -134,12 +147,12 @@ var geojsonLayer = new L.GeoJSON.AJAX(myURL, {
 geojsonLayer.addTo(map);
 
 
+    //Load GeoJSON
+var geojsonPointLayer = new L.GeoJSON.AJAX(myPointLayer, {
+});
+    
 
-
-
-//maybe later add a legend??
-
-
+    
 
 var baseMaps = {
   "OpenStreetMap": osm,
@@ -147,14 +160,15 @@ var baseMaps = {
 };
 
 var overlayMaps = {
-  "The Geojson": geojsonLayer
+  "The Geojson": geojsonLayer,
+    "Sample Points": geojsonPointLayer
 };
 
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 
-
-
+    
+    
 var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (map) {
