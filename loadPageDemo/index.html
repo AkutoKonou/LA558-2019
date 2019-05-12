@@ -19,13 +19,10 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 
-
     <script src="https://profseeger.github.io/LA558-2019/classes/leaflet-ajax-gh-pages/dist/leaflet.ajax.min.js"></script>
-
 
     <style>
         #map {
@@ -86,10 +83,13 @@
         $(document).ready(function() {
             //load the defaut start page on doc ready
             $('#loadedContent').load('home.html');
+            
+            //create a random num er to use in the URL - this will help descrease caching of the loaded file.
+            x=Math.random();
 
             $(".menuButton").click(function() {
                 //preventDefault(),
-                var a = this.name + ".html?";
+                var a = this.name + ".html?a="+x;
                 console.log(a);
 
                 $('#loadedContent').load(a);
