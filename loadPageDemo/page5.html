@@ -4,26 +4,41 @@
     <meta charset="UTF-8">
     <title>A Cube Timer</title>
 
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
     <style>
+        body {
+            margin: 10px;
+        }
 
     </style>
-                         
-    <script>
-        
-    </script>
-    
+
+
+
 </head>
 
 <body>
-<h3>The Timer</h3>
-This is a timer or stopwatch. Press the spacebar to start and stop/<br><br>
-     <div id = 'timer'></div>
+    <h3>The Timer</h3>
+    This is a timer or stopwatch. Press the spacebar to start and stop/<br><br>
+
+    <div id="timeContainer" class="well well-sm">
+        <time id="timerValue"></time>
+    </div>
+    <div id="timerButtons">
+				<button id="start" class="btn btn-success">START</button>
+				<button id="stop" class="btn btn-danger" disabled="disabled">STOP</button>
+				<button id="reset" class="btn btn-default" disabled="disabled">RESET</button>
+			</div>
+
 </body>
 
 </html>
 
-    <script>
-//
-        
-    </script>   
-                
+<script>
+    
+
+</script>
