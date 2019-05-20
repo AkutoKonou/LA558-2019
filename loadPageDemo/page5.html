@@ -57,6 +57,7 @@ updateDisplay();
 
     $(document).ready(function() {
         console.clear();
+        $("#stop").hide();
 
         var dStart, dStop = "";
 
@@ -74,6 +75,9 @@ updateDisplay();
             $("#timer").html("");
             $("#timer").append("Start " + h + ":" + m + ":" + s + ":" + ms);
             $("#timer").append("<br>");
+            
+            $("#stop").show();
+            $("#start").hide();
 
         })
 
@@ -82,6 +86,8 @@ updateDisplay();
         $("#stop").click(function() {
 
             dStop = new Date(); // now
+            
+             $("#start").show();
             //console.log(dStart);
             h = dStop.getHours();
             m = dStop.getMinutes();
