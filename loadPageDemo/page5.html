@@ -28,7 +28,7 @@
     <div id="timerButtons">
         <button id="start" class="btn btn-success">START</button>
         <button id="stop" class="btn btn-danger">STOP</button>
-        <br>
+        <br><br>
         <button id="reset" class="btn btn-default">RESET</button>
         <button id="record" class="btn btn-default">RECORD</button>
     </div>
@@ -140,6 +140,10 @@ updateDisplay();
         $("#reset").click(function() {
 
             $("#timer").html("");
+            
+             $("#reset").hide();
+             $("#record").hide();
+            
         })
 
 
